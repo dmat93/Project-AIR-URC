@@ -44,7 +44,7 @@ _Optionaly we can store more signals, according to each button of a remote contr
 `results.bit [int]`  
 
 ##### Send the received signal using value and number of bits
-`irsend.send(results.value,32);`
+`irsend.sendRC5(code_value,code_bits);`
 
 _We can store the number of bit of the recevied signal into a variable and then we can use it to send the signal_
 
