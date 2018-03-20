@@ -48,7 +48,7 @@ _Optionaly we can store more signals, according to each button of a remote contr
 
 _We can store the number of bit of the recevied signal into a variable and then we can use it to send the signal_
 
-#### Consideration
+### Considerations
 ##### Send function
 `IRsend.send(unsigned long data, int n_bits)`
 
