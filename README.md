@@ -50,7 +50,7 @@ _We can store the number of bit of the recevied signal into a variable and then 
 
 ### Considerations
 ##### Send function
-`IRsend.send(unsigned long data, int n_bits)`
+`IRsend.sendRC5(unsigned long data, int n_bits)`
 
 ##### Decode funtion
 `IRrecv.decode(&decode_results results)`
