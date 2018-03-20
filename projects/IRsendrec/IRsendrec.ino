@@ -7,6 +7,8 @@ int RECV_PIN = 11; //In my case, for Nano Clone it's D11, you can change this
 IRrecv irrecv(RECV_PIN); //receiver linked to D11
 IRsend irsend; //sender linked to D3
 decode_results results; //received decoded signal
+int code_bits = 32;
+unsigned long code_value = 0;
 
 void setup()
 {
@@ -19,12 +21,12 @@ void setup()
 void loop() {
   if (irrecv.decode(&results)) { //if you decoded something
     Serial.println(results.value, HEX); //results.value get the value (unsigned long) of the recorded signal (in bits), 
-                                        //So, print the value in HEX
+    code_value = results.value;
+    code_bits = results.bits;
     irrecv.resume(); // Receive the next value
   }
   if(Serial.read()!=-1){ //open serial monitor and send a character in input, x1 character = x1 transmission
-    irsend.send(results.value,32); //send the signal with that length in bits; 1 HEX value = 4bits; 
-                                   //you can get number of bit using results.bits (int)
+    irsend.sendRC5(code_value,code_bits); //send the signal with that length in bits; 
   }
   delay(500);
 }
