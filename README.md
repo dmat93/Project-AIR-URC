@@ -1,4 +1,4 @@
-# Arduino-IR
+# Arduino-IR-examples
 
 _I would provide some example of code useful to interacts with IR Tx/Rx module using Arduino IDE._
 
