@@ -24,13 +24,46 @@ Obviously you are not forced to use my same configuration, many other guides sug
 
 ## Code
 
-The project you can find in _projects/_ works as follow
+Let's refer to the project you can find in _projects/_ 
 
- 1. Record a signal  
-	  a. The signal is coded
- 2. Get the value and the number of bits of the signal
- 3. Send the recorded signal
+##### Initialization of the recevier:  
+`IRrecv irrecv(RECV_PIN)`  
 
-Optionaly we can store one or more signals and transmit these ones according to physical buttons.
+##### Initialization of the sender:  
+`IRsend irsend`  
 
-(In progress...)
+##### Store the decoded results:  
+`decode_results results`  
+
+_Optionaly we can store more signals, according to each button of a remote control for example, and then we can send different signal pushing different buttons._
+
+##### Get the value of the decoded signal
+`results.value [unsigned long]`  
+
+##### Get the number of bits of the decoded signal
+`results.bit [int]`  
+
+##### Send the received signal using value and number of bits
+`irsend.send(results.value,32);`
+
+_We can store the number of bit of the recevied signal into a variable and then we can use it to send the signal_
+
+#### Consideration
+##### Send function
+`IRsend.send(unsigned long data, int n_bits)`
+
+##### Decode funtion
+`IRrecv.decode(&decode_results results)`
+
+## Applications
+
+ - Remote Controller
+
+## Improvements
+
+ - Store more decoded signals
+ - Assign a button to a signal
+ - Integration of display
+ - (...)
+
+[mattiaquadrini@gmail.com](mailto:mattiaquadrini@gmail.com)
