@@ -5,6 +5,7 @@ _I would provide some example of code useful to interacts with IR Tx/Rx module u
 
 ## Setup
 
+### Devices
 In my case I've used some low-cost component that you can easily find on the web. I bought them on [AliExpress](https://best.aliexpress.com)
 
  - [IR transmitter](https://www.aliexpress.com/item/Free-Shipping-electronic-building-blocks-infrared-transmitter-module-IR-Transmitter-for-arduino/1972261135.html?spm=2114.search0104.3.8.912f5ac1FZRiFU&ws_ab_test=searchweb0_0,searchweb201602_3_10152_10151_10065_10344_10068_10342_10325_10343_10546_10340_10548_10341_10696_10084_10083_10618_10304_10307_5711211_10313_10059_10184_10534_100031_10103_10624_10623_443_10622_10621_10620_10811,searchweb201603_1,ppcSwitch_5&algo_expid=8f9b5a27-1a42-4be6-a34b-22f3c90e50c1-1&algo_pvid=8f9b5a27-1a42-4be6-a34b-22f3c90e50c1&transAbTest=ae803_5&priceBeautifyAB=0)  
@@ -13,6 +14,13 @@ In my case I've used some low-cost component that you can easily find on the web
 	- This clone can be a pain in your ass
 	
 Obviously you are not forced to use my same configuration, many other guides suggest to use single diodes as Tx and Rx instead modules.
+
+
+
+### Connections
+![Arduino-IR Connections](/media/scheme.jpg)  
+
+
 
 ## Code
 
