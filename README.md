@@ -1,6 +1,6 @@
-# Arduino-IR-examples
+# Arduino IR Universal Remote
 
-_I would provide some example of code useful to interacts with IR Tx/Rx module using Arduino IDE._
+_Goal: to store, manually or by recording, and to send NEC codes through IR module_
 
 
 ## Setup
