@@ -14,8 +14,9 @@ void setup()
 {
   Serial.begin(9600);
   Serial.println("Booting..."); //Debug Message
+  Serial.println("============================");
   irrecv.enableIRIn(); // Start the receiver
-  Serial.println("Ready! v1.0");
+  Serial.println("Ready! v1.01");
 }
 
 void loop() {
@@ -26,7 +27,7 @@ void loop() {
     irrecv.resume(); // Receive the next value
   }
   if(Serial.read()!=-1){ //open serial monitor and send a character in input, x1 character = x1 transmission
-    irsend.sendRC5(code_value,code_bits); //send the signal with that length in bits; 
+    irsend.sendNEC(code_value,code_bits); //send the signal with that length in bits; 
   }
   delay(500);
 }
