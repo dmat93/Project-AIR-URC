@@ -1,4 +1,4 @@
-# Arduino IR Universal Remote
+# Arduino IR Universal Remote Controller
 
 _Goal: to store, manually or by recording, and to send NEC codes through IR module_
 
